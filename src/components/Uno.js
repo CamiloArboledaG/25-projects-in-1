@@ -16,9 +16,16 @@ const Uno = () => {
     const [Fondo, setFondo] = useState("lightcoral");
 
     const handleClick = () => {
+        var predeterminado = Fondo;
         var colores = ["lightcyan","lightgoldenrodyellow","lightgreen","lightpink","lightsalmon","lightskyblue","lightyellow","lightblue","lightcoral","lightseagreen","lightslategray","lightsteelblue"];
 	    var numero = (Math.random()*11).toFixed(0);
-        setFondo(colores[numero]);
+        var nuevo =colores[numero];
+        if(predeterminado !== nuevo){
+        setFondo(nuevo);
+        }else{
+        nuevo="#32a852"
+        setFondo(nuevo);
+        };
     }
 
     return (
