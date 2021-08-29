@@ -10,6 +10,18 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+    },
+    paper: {
+        padding: "1rem",
+        maxWidth: "60vh",
+        minWidth: "60vh",
+        maxHeight: "25vh",
+        minHeight: "25vh",
+        border: "5px solid lightskyblue",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-around",
     }
 }));
 
@@ -66,14 +78,14 @@ const Tres = () => {
 
     return (
         <div className={classes.root} style={{ backgroundColor: "lightblue" }}>
-            <Paper>
-                <Typography>
-                    {autor}
-                </Typography>
+            <Paper className={classes.paper}>
                 <Typography>
                     {texto}
                 </Typography>
-                <Button onClick={() => generate()}>Click me!!</Button>
+                <Typography>
+                    {autor}
+                </Typography>
+                <Button onClick={() => generate()} style={{backgroundColor: "lightblue"}}>Click me!!</Button>
             </Paper>
         </div>
     );
